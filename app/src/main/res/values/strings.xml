@@ -27,4 +27,11 @@
     <string name="we_just_texted_you_a_confirmation_code_please_enter_it_below">We just texted you a confirmation code. Please enter it below.</string>
     <string name="next">Next</string>
     <string name="i_did_not_receive_it">I did not receive it</string>
+    <string name="name">Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="logout">Logout</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="bio">Bio</string>
+    <string name="profile_saved">Profile Saved!</string>
 </resources>
