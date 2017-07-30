@@ -3,6 +3,8 @@ package com.jaspreet.worldwidelive.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.os.Environment;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
@@ -11,8 +13,11 @@ import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.util.Random;
 
 /**
@@ -117,6 +122,28 @@ public class Util {
 
         return null;
 
+    }
+
+    public static File saveImageToStorage(Bitmap mSelectedImage, String fileName) {
+        Bitmap bitmap = mSelectedImage;
+        OutputStream fout = null;
+        File imageFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString());
+        imageFile.mkdirs();
+
+        if (!imageFile.exists()) {
+            imageFile.mkdirs();
+        }
+        imageFile = new File(imageFile, fileName);
+        try {
+            fout = new FileOutputStream(imageFile);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 50, fout);
+            fout.flush();
+            fout.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return imageFile;
     }
 
     public static String getRandomNumber() {

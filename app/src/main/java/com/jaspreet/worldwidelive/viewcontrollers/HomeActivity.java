@@ -45,6 +45,7 @@ public class HomeActivity extends BaseActivity implements MainActivityMvpView {
     public void onLoginSuccess(String Code) {
         Log.d("Code", Code);
         if (Code.equals("true")) {
+            PreferenceConnector.writeBoolean(PreferenceConnector.PREF_IS_USER_LOGGEDIN, true, this);
             addFragment(ProfileFragment_.builder().build());
         } else
             addFragment(VerifyCodeFragment_.builder()

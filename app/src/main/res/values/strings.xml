@@ -34,4 +34,8 @@
     <string name="profile_photo">Profile Photo</string>
     <string name="bio">Bio</string>
     <string name="profile_saved">Profile Saved!</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_lib">Choose from Library</string>
+
+    <string name="add_photo">Add Photo!</string>
 </resources>
