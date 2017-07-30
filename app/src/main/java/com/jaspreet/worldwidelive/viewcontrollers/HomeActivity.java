@@ -55,7 +55,7 @@ public class HomeActivity extends BaseActivity implements MainActivityMvpView {
 
     @Override
     public void onLoginFailure() {
-//add login fragment
+        //add login fragment
         addFragment(LoginFragment_.builder().build());
     }
 

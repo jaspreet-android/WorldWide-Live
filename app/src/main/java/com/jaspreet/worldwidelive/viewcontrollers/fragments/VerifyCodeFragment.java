@@ -62,6 +62,7 @@ public class VerifyCodeFragment extends Fragment implements MainActivityMvpView 
     @Override
     public void onLoginSuccess(String Code) {
         progressView.setVisibility(View.GONE);
+        ((HomeActivity) getActivity()).onLoginSuccess(Code);
     }
 
     @Override
