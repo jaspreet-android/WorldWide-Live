@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.jaspreet.worldwidelive.viewcontrollers.fragments.VerifyCodeFragment">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/we_just_texted_you_a_confirmation_code_please_enter_it_below"
+        android:textSize="@dimen/text_size" />
+
+    <ProgressBar
+        android:id="@+id/progressView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/confirmationCodeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp" />
+
+    <Button
+        android:id="@+id/mVerifyButton"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/next"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/mNotReceivedButton"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/i_did_not_receive_it"
+        android:textStyle="bold" />
+</LinearLayout>

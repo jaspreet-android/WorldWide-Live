@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.jaspreet.worldwidelive.viewcontrollers.fragments.LoginFragment">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_sign_in_to_wwl_you_will_be_texted_a_confirmation_code"
+        android:textSize="@dimen/text_size" />
+
+    <ProgressBar
+        android:id="@+id/progressView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/countryCodeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingEnd="2dp"
+            android:paddingStart="2dp" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/phoneNumberText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.80"
+            android:gravity="center|start"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mGetCodeButton"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/get_confirmation_code"
+        android:textStyle="bold" />
+
+</LinearLayout>

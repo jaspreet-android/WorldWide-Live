@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">WorldWideLive</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_number">This phone number is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_invalid_code">This code is too short</string>
+    <string name="error_code_not_match">This code is not matched</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="watch_news">Watch News</string>
+    <string name="report_news">Report News</string>
+    <string name="wwl">WWL</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_sign_in_to_wwl_you_will_be_texted_a_confirmation_code">Please sign in to WWL. You will be texted a confirmation code.</string>
+    <string name="get_confirmation_code">Get Confirmation Code</string>
+    <string name="we_just_texted_you_a_confirmation_code_please_enter_it_below">We just texted you a confirmation code. Please enter it below.</string>
+    <string name="next">Next</string>
+    <string name="i_did_not_receive_it">I did not receive it</string>
+</resources>
