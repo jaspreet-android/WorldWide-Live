@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    android:gravity="center"
+
     android:orientation="vertical"
     tools:context="com.jaspreet.worldwidelive.viewcontrollers.fragments.LoginFragment">
 
     <android.support.v7.widget.AppCompatTextView
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/please_sign_in_to_wwl_you_will_be_texted_a_confirmation_code"
@@ -20,6 +21,7 @@
         android:visibility="gone" />
 
     <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -29,6 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.20"
+            android:text="1"
             android:gravity="center"
             android:inputType="number"
             android:maxLength="3"
@@ -49,11 +52,12 @@
     </LinearLayout>
 
     <Button
+
         android:id="@+id/mGetCodeButton"
         style="?android:textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:text="@string/get_confirmation_code"
         android:textStyle="bold" />
 

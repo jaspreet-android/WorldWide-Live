@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context="com.jaspreet.worldwidelive.viewcontrollers.fragments.VerifyCodeFragment">
 
     <android.support.v7.widget.AppCompatTextView
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/we_just_texted_you_a_confirmation_code_please_enter_it_below"
@@ -21,6 +21,7 @@
 
 
     <android.support.v7.widget.AppCompatEditText
+        android:layout_marginTop="15dp"
         android:id="@+id/confirmationCodeText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

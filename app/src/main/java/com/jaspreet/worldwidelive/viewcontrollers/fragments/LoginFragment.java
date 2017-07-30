@@ -48,7 +48,7 @@ public class LoginFragment extends Fragment implements MainActivityMvpView {
         String code = countryCodeText.getText().toString();
         String number = phoneNumberText.getText().toString();
         PreferenceConnector.writeString(PreferenceConnector.PREF_USER_PHONE_NUMBER, code + number, getActivity());
-        presenter.onLoginClick(code + number);
+        presenter.onLoginClick(code ,number);
     }
 
     public LoginFragment() {
@@ -144,5 +144,11 @@ public class LoginFragment extends Fragment implements MainActivityMvpView {
     @Override
     public void resetError() {
         phoneNumberText.setError(null);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        presenter.onDetachView();
     }
 }
