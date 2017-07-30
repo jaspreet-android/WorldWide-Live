@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity {
     @Click(R.id.logOutBtn)
     void onLogOutBtnClick(View view) {
         if (!PreferenceConnector.readBoolean(PreferenceConnector.PREF_IS_USER_LOGGEDIN, false, this)) {
-            startActivity(new Intent(MainActivity.this, HomeActivity_.class));
+            finish();
         }
     }
 
@@ -43,6 +43,9 @@ public class MainActivity extends BaseActivity {
 
     @AfterViews
     public void InitViews() {
+        if (PreferenceConnector.readBoolean(PreferenceConnector.PREF_IS_USER_LOGGEDIN, false, this)) {
+            logOutBtn.setImageResource(R.drawable.ic_person_black_24dp);
+        }
     }
 }
 
