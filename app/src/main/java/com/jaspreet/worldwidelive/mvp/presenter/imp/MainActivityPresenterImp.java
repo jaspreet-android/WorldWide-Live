@@ -14,7 +14,7 @@ import com.jaspreet.worldwidelive.utils.Util;
 
 public class MainActivityPresenterImp implements MainActivityPresenter {
     private static MainActivityPresenter instance;
-    private final MainActivityMvpView mainActivityMvpView;
+    private MainActivityMvpView mainActivityMvpView;
 
     private MainActivityPresenterImp(MainActivityMvpView mainActivityMvpView) {
         this.mainActivityMvpView = mainActivityMvpView;
@@ -27,7 +27,8 @@ public class MainActivityPresenterImp implements MainActivityPresenter {
 
     @Override
     public void onDetachView() {
-
+    mainActivityMvpView=null;
+    instance=null;
     }
 
     public MainActivityMvpView getMainActivityMvpView() {
@@ -36,18 +37,21 @@ public class MainActivityPresenterImp implements MainActivityPresenter {
 
 
     public static MainActivityPresenter getInstance(MainActivityMvpView mainActivityMvpView) {
-        if (null == instance) {
-            instance = new MainActivityPresenterImp(mainActivityMvpView);
-        }
+        instance = new MainActivityPresenterImp(mainActivityMvpView);
         return instance;
     }
 
 
     @Override
-    public void onLoginClick(String phoneNumber) {
+    public void onLoginClick(String countryCode,String phoneNumber) {
         if (!TextUtils.isEmpty(phoneNumber)) {
             if (phoneNumber.length() < 7) {
                 mainActivityMvpView.setPhoneError(mainActivityMvpView.getContext().getString(R.string.error_invalid_number));
+                return;
+            }
+
+            if (countryCode.length() < 1) {
+                mainActivityMvpView.setCodeError(mainActivityMvpView.getContext().getString(R.string.error_invalid_number));
                 return;
             }
             String code = Util.getRandomNumber();

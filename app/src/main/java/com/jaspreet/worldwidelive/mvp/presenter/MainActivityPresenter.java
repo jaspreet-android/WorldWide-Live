@@ -5,7 +5,7 @@ package com.jaspreet.worldwidelive.mvp.presenter;
  */
 
 public interface MainActivityPresenter extends Presenter {
-    void onLoginClick(String phoneNumber);
+    void onLoginClick(String code,String phoneNumber);
 
     void onVerifyCodeClick(String code, String generatedCode);
 }
