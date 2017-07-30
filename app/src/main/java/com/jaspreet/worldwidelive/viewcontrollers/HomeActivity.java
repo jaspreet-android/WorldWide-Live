@@ -12,6 +12,7 @@ import com.jaspreet.worldwidelive.mvp.presenter.imp.MainActivityPresenterImp;
 import com.jaspreet.worldwidelive.mvp.views.MainActivityMvpView;
 import com.jaspreet.worldwidelive.preferences.PreferenceConnector;
 import com.jaspreet.worldwidelive.viewcontrollers.fragments.LoginFragment_;
+import com.jaspreet.worldwidelive.viewcontrollers.fragments.ProfileFragment_;
 import com.jaspreet.worldwidelive.viewcontrollers.fragments.VerifyCodeFragment_;
 
 import org.androidannotations.annotations.AfterViews;
@@ -43,9 +44,12 @@ public class HomeActivity extends BaseActivity implements MainActivityMvpView {
     @Override
     public void onLoginSuccess(String Code) {
         Log.d("Code", Code);
-        addFragment(VerifyCodeFragment_.builder()
-                .arg(PreferenceConnector.PREF_CODE, Code)
-                .build());
+        if (Code.equals("true")) {
+            addFragment(ProfileFragment_.builder().build());
+        } else
+            addFragment(VerifyCodeFragment_.builder()
+                    .arg(PreferenceConnector.PREF_CODE, Code)
+                    .build());
     }
 
     @Override

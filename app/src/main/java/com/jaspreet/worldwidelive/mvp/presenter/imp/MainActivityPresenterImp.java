@@ -69,7 +69,7 @@ public class MainActivityPresenterImp implements MainActivityPresenter {
                 return;
             }
             if ("123456".equals(Code))
-                mainActivityMvpView.onLoginSuccess(Code);
+                mainActivityMvpView.onLoginSuccess("true");
             else
                 mainActivityMvpView.setCodeError(mainActivityMvpView.getContext().getString(R.string.error_code_not_match));
         } else {

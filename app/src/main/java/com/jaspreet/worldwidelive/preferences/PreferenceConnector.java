@@ -24,6 +24,9 @@ public class PreferenceConnector {
     public final static String PREF_IS_USER_LOGGEDIN = "user_loogged_in";
     public final static String PREF_USER_PHONE_NUMBER = "phone_number";
     public final static String PREF_CODE = "code";
+    public final static String PREF_USER_NAME = "name";
+    public final static String PREF_BIO = "bio";
+    public final static String PREF_PIC = "pic";
 
     public static void writeBoolean(String key, boolean value, Context context) {
         getEditor(context).putBoolean(key, value).commit();
